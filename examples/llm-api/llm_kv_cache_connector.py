@@ -33,7 +33,7 @@ class PersistentKvCacheConnectorMetadata:
 
 class PersistentKvCacheConnectorWorker(KvCacheConnectorWorker):
 
-    def __init__(self):
+    def __init__(self, tokens_per_block):
         super().__init__()
 
         self.kv_cache_tensor = None
