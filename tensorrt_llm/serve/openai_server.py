@@ -1212,6 +1212,7 @@ class OpenAIServer(_VideoRoutesMixin):
                              tracing.extract_trace_headers(raw_request.headers))
 
             scheduling_params = SchedulingParams(
+                attention_dp_relax=True,
                 agent_hierarchy=request.agent_hierarchy)
 
             generate_inputs = prompt
@@ -1625,6 +1626,7 @@ class OpenAIServer(_VideoRoutesMixin):
             )
 
             scheduling_params = SchedulingParams(
+                attention_dp_relax=True,
                 agent_hierarchy=request.agent_hierarchy)
 
             # Generate
